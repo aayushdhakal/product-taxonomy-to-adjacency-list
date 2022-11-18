@@ -6,7 +6,7 @@ const fs = require('fs');
 const buffer = fs.readFileSync('./adjacencyListTaxonomyFinal.json', 'utf8');
 const jsonFormat = JSON.parse(buffer);
 
-let value = 'Horse Grooming Combs, Brushes & Mitts';
+let value = 'Jigsaw Puzzle Accessories';
 // let value = 'Hair Curler Clips & Pins';
 
 const traversValues = [];

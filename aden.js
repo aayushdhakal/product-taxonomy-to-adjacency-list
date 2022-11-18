@@ -24,7 +24,7 @@ const buffer = fs.readFileSync('./adjacencyListTaxonomyRaw.json', 'utf8');
 // }, {
 //    "parent": "Animals & Pet Supplies",
 //       "subParent": "Pet Supplies",
-//          "flag": "branch"
+//          "flag": "child"
 // }
 const jsonFormat = (JSON.parse(buffer));
 

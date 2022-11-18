@@ -5,9 +5,10 @@ const buffer = fs.readFileSync('./adjacencyListTaxonomyRaw.json', 'utf8');
 const jsonToArray = JSON.parse(buffer);
 
 let value = 'Animals & Pet Supplies';
-// value = 'Embellishments & Trims';
+value = 'Embellishments & Trims';
 // value = 'Arts & Crafts';
-value ='Horse Grooming'
+// value ='Electronics'
+value = 'Horse Grooming'
 
 let wordStore = [];//store to storing the unique childs of the each parent
 
