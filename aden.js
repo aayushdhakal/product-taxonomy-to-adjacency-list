@@ -1,6 +1,6 @@
 // https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.txt
 // execution time is 6m43s
-
+console.time('start')
 const fs = require('fs');
 
 //reading the file for the taxonomy in json format sample format
@@ -40,7 +40,7 @@ jsonFormat.forEach((elementObeject, index) => {
 
    for (const key in value = workingObject) {
       //check if it is the root 
-      let flag = 'branch';
+      let flag = 'child';
 
       //check if the sub-parent of the value is present or not .if it is not present then the only one that is present is considered as the parent
       if (!workingObject['SUB-PARENT_0'] && !workingObject['SUB-PARENT_1'] && !workingObject['SUB-PARENT_2'] && !workingObject['SUB-PARENT_3'] && !workingObject['SUB-PARENT_4'] && !workingObject['SUB-PARENT_5']) {
@@ -75,7 +75,7 @@ jsonFormat.forEach((elementObeject, index) => {
          let storingObject = {
             parent: tempPreviousValueForNext,
             subParent: value[key],
-            flag: value[key] === null ? 'child' : flag
+            flag: value[key] === null ? 'leaf' : flag
          };
 
          //check if the object already exists on the array file 
@@ -96,3 +96,5 @@ jsonFormat.forEach((elementObeject, index) => {
 
 //wirting the output to the file 
 const bufferWrite = fs.writeFileSync('./adjacencyListTaxonomyFinal.json', JSON.stringify(baseArray));
+
+console.timeEnd('start');
