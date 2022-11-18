@@ -1,8 +1,18 @@
-This project can mainly used in the product categories section on the ecommerce site.
+This project can mainly used in the product categories section on the e-commerce site.
+
 
 Working on the Porject
 
 Prior to using this Project.
+  generating the new file for adjacencyListTaxonomyRaw.json file
+  Step 1:- go to website 
+      https://www.google.com/basepages/producttype/taxonomy-with-ids.en-US.xls
+  Step 2:- Download the excel sheet 
+  Step 3:- Add the new line on the excel sheet and each column should we add 
+           PARENT ,SUB-PARENT_0,SUB-PARENT_1 to   SUB-PARENT_5.
+  Step 4:- go to this webiste
+       https://tableconvert.com/excel-to-json
+  sTEP 5:- The output file can be used for this project
 
 Use the each of the file in the project.
   1.aden.js
